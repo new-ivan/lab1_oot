@@ -17,6 +17,8 @@ namespace lab1_sandbox
             moodlist = new Dictionary<string, double>();
             alltweets = new List<Tweet>();
             StreamReader sr = new StreamReader("sentiments.csv");
+            if (!File.Exists("31 Seconds.mp3"))
+                throw new FileNotFoundException("31 Seconds.mp3 missed");
             string[] buff1;
             buff1 = sr.ReadToEnd().Split('\n');
             foreach (string st in buff1)
